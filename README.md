@@ -35,4 +35,4 @@ Live site: [**audio-transforms.netlify.app**](https://audio-transforms.netlify.a
 
 ## License
 
-MIT License
+[MIT License](https://opensource.org/licenses/MIT)
