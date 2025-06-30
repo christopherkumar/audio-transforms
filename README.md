@@ -15,8 +15,6 @@ Live site: [**audio-transforms.netlify.app**](https://audio-transforms.netlify.a
   - Short-Time Fourier Transform (STFT)
   - Envelope Detection
   - Zero Crossing Rate
-- Glassmorphism UI with dynamic audio waveform background
-- Responsive design for desktop and mobile devices
 
 ## Installation
 
@@ -34,12 +32,6 @@ Live site: [**audio-transforms.netlify.app**](https://audio-transforms.netlify.a
 3. View real-time audio signal (top graph) and selected transform (bottom graph)
 4. For STFT, adjust the window size parameter as needed
 5. Click "Stop" to end recording
-
-## Browser Compatibility
-
-- Chrome/Edge: Full support
-- Firefox: Full support
-- Safari: Full support (iOS 14.5+)
 
 ## License
 
