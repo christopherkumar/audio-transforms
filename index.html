@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Signal Processing Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Background Audio Wave Canvas -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <!-- Main Window Container -->
+    <div class="main-window">
+      <div class="window-header">
+        <div class="window-controls">
+          <span class="window-dot window-dot-red"></span>
+          <span class="window-dot window-dot-yellow"></span>
+          <span class="window-dot window-dot-green"></span>
+        </div>
+        <h1 class="window-title">Signal Processing Analyzer</h1>
+        <div class="window-actions">
+          <div id="status" class="status" style="display: none">
+            <span class="status-dot"></span>
+            Recording
+          </div>
+        </div>
+      </div>
+
+      <div class="window-content">
+        <div class="controls-bar">
+          <button id="startBtn" class="btn btn-primary">
+            <span class="btn-icon">▶</span>
+            Start Recording
+          </button>
+          <div class="control-group">
+            <label class="control-label">Transform:</label>
+            <div class="dropdown">
+              <select id="transformType">
+                <option value="fft">FFT</option>
+                <option value="power">Power Spectrum</option>
+                <option value="autocorr">Autocorrelation</option>
+                <option value="cepstrum">Cepstrum</option>
+                <option value="stft">STFT</option>
+                <option value="envelope">Envelope</option>
+                <option value="zerocross">Zero Crossing</option>
+              </select>
+            </div>
+          </div>
+          <div class="param-control" id="windowControl" style="display: none">
+            <label>Window:</label>
+            <input
+              type="number"
+              id="windowSize"
+              value="50"
+              min="10"
+              max="200"
+              step="10"
+            />
+            <label>ms</label>
+          </div>
+        </div>
+
+        <div class="plots-grid">
+          <!-- Time Domain Window -->
+          <div class="plot-window">
+            <div class="plot-header">
+              <span class="plot-icon">〜</span>
+              <span class="plot-title">Raw Audio Signal (Time Domain)</span>
+            </div>
+            <div class="plot-body">
+              <div class="canvas-wrapper">
+                <canvas id="timeCanvas"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transform Window -->
+          <div class="plot-window">
+            <div class="plot-header">
+              <span class="plot-icon">⊓</span>
+              <span class="plot-title" id="transformTitle"
+                >Fast Fourier Transform (FFT)</span
+              >
+            </div>
+            <div class="plot-body">
+              <div class="canvas-wrapper">
+                <canvas id="transformCanvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
