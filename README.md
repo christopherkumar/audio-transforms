@@ -2,7 +2,7 @@
 
 A real-time audio signal analyzer with various signal processing transforms, built with Web Audio API.
 
-Live site: **audio-transforms.netlify.app**
+Live site: [**audio-transforms.netlify.app**](https://audio-transforms.netlify.app)
 
 ## Features
 
