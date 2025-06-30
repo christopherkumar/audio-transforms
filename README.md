@@ -1,4 +1,3 @@
-# audio-transforms
 # Signal Processing Analyzer
 
 A real-time audio signal analyzer with various signal processing transforms, built with Web Audio API.
